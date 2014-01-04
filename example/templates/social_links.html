@@ -1,0 +1,6 @@
+<ul>
+  <li><a href="{% url 'social:begin' "google-oauth2" %}?next={{ request.path }}">{% if user.is_authenticated %}Associate{% else %}Signup or Login{% endif %} Google</a></li>
+  <li><a href="{% url 'social:begin' "twitter" %}?next={{ request.path }}">{% if user.is_authenticated %}Associate{% else %}Signup or Login{% endif %} Twitter</a></li>
+  <li><a href="{% url 'social:begin' "facebook" %}?next={{ request.path }}">{% if user.is_authenticated %}Associate{% else %}Signup or Login{% endif %} Facebook</a></li>
+  <li><a href="{% url 'social:begin' "reddit" %}?next={{ request.path }}">{% if user.is_authenticated %}Associate{% else %}Signup or Login{% endif %} Reddit</a></li>
+</ul>

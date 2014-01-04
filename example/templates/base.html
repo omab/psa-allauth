@@ -1,0 +1,16 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Python Social Auth - Allauth Flows Demo</title>
+  </head>
+  <body>
+    {% block content %}{% endblock %}
+
+    {% block home_link %}
+      <p>
+        <a href="{% url 'home' %}?reset=1">Return to Index and reset all</a>
+        {% if user.is_authenticated %}or <a href="{% url 'logout' %}?next={{ request.path }}">Logout</a>{% endif %}
+      </p>
+    {% endblock %}
+  </body>
+</html>

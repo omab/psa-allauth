@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% load url from future %}
+
+{% block content %}
+  <section>
+    <header><h1>2. Connecting more than one social account to a local account</h1></header>
+    {% include "social_links.html" %}
+  </section>
+
+  {% include "user_details.html" %}
+{% endblock %}

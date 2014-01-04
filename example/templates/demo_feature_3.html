@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% load url from future %}
+
+{% block content %}
+  <section>
+    <header><h1>2. Disconnecting a social account -- requires setting a password if only the local account remain</h1></header>
+    {% include "social_links.html" %}
+  </section>
+
+  {% with show_disconnect=True %}
+    {% include "user_details.html" %}
+  {% endwith %}
+{% endblock %}

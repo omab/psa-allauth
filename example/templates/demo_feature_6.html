@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% load url from future %}
+
+{% block content %}
+  <section>
+    <header><h1>6. E-mail address management (multiple e-mail addresses, setting a primary)</h1></header>
+    <p>This feature is partially supported since primary email flagging is not
+       implemented in python-social-auth, but check how easy it's to do so</p>
+    
+    <ul>
+      <li><a href="{% url 'social:begin' "email" %}?next={{ request.path }}">{% if user.is_authenticated %}Associate{% else %}Signup with{% endif %} E-mail</a></li>
+    </ul>
+  </section>
+
+  {% if user.is_authenticated %}
+    <section>
+      <header><h1>User details</h1></header>
+      <div>
+        <p>You are logged in as <strong>{{ user.username }}</strong>!</p>
+        <p>Associated emails:</p>
+        <ul>
+          {% for assoc in backends.associated %}
+          <li>{{ assoc.uid }} ({% if assoc.extra_data.primary %}primary{% else %}<a href="{% url 'primary_email' assoc.id %}">make primary</a>{% endif %})</li>
+          {% empty %}
+            <li>No emails associated</li>
+          {% endfor %}
+        </ul>
+      </div>
+    </section>
+  {% endif %}
+
+{% endblock %}

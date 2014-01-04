@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% load url from future %}
+
+{% block content %}
+  <section>
+    <header><h1>4. Optional instant-signup for social accounts -- no questions asked</h1></header>
+    <p>This is the default behavior of python-social-auth, no major difference with previous
+       social signups in previous demos</p>
+
+    <div>
+      <h3>Social</h3>
+      {% include "social_links.html" %}
+    </div>
+  </section>
+
+  {% include "user_details.html" %}
+{% endblock %}

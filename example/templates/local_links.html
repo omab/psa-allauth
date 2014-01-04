@@ -1,0 +1,4 @@
+<ul>
+  <li><a href="{% url 'social:begin' "email" %}?next={{ request.path }}">{% if user.is_authenticated %}Associate{% else %}Signup or Login using{% endif %} E-mail</a></li>
+  <li><a href="{% url 'social:begin' "username" %}?next={{ request.path }}">{% if user.is_authenticated %}Associate{% else %}Signup or Login using{% endif %} Username</a></li>
+</ul>

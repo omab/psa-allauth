@@ -1,0 +1,75 @@
+{% extends "base.html" %}
+{% load url from future %}
+
+{% block content %}
+<section>
+  <header><h1>Allauth supported flows</h1></header>
+  <div>
+    From <a href="https://github.com/pennersr/django-allauth#supported-flows">Django-Allauth Supported Flows</a>
+    these are the supported flows:
+
+    <table>
+      <thead>
+        <tr>
+          <th></th>
+          <th>Feature</th>
+          <th>Supported by PSA?</th>
+          <th>Demo</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Signup of both local and social accounts</td>
+          <td>Yes</td>
+          <td><a href="{% url 'demo_feature_1' %}">Open</a></td>
+        <tr>
+
+        <tr>
+          <td>2</td>
+          <td>Connecting more than one social account to a local account</td>
+          <td>Yes</td>
+          <td><a href="{% url 'demo_feature_2' %}">Open</a></td>
+        <tr>
+
+        <tr>
+          <td>3</td>
+          <td>Disconnecting a social account -- requires setting a password if only the local account remains</td>
+          <td>Yes</td>
+          <td><a href="{% url 'demo_feature_3' %}">Open</a></td>
+        <tr>
+
+        <tr>
+          <td>4</td>
+          <td>Optional instant-signup for social accounts -- no questions asked</td>
+          <td>Yes</td>
+          <td><a href="{% url 'demo_feature_4' %}">Open</a></td>
+        <tr>
+
+        <tr>
+          <td>5</td>
+          <td>E-mail address verification flow</td>
+          <td>Yes</td>
+          <td><a href="{% url 'demo_feature_5' %}">Open</a></td>
+        <tr>
+
+        <tr>
+          <td>6</td>
+          <td>E-mail address management (multiple e-mail addresses, setting a primary)</td>
+          <td>Partial</td>
+          <td><a href="{% url 'demo_feature_6' %}">Open</a></td>
+        <tr>
+
+        <tr>
+          <td>7</td>
+          <td>Password forgotten flow</td>
+          <td>No</td>
+          <td></td>
+        <tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+{% endblock %}
+
+{% block home_link %}{% endblock %}

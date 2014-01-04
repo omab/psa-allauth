@@ -1,0 +1,27 @@
+# Fill the settings below
+
+##
+# Social backends keys / secrets
+
+SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = ''
+SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = ''
+
+SOCIAL_AUTH_FACEBOOK_KEY = ''
+SOCIAL_AUTH_FACEBOOK_SECRET = ''
+
+SOCIAL_AUTH_TWITTER_KEY = ''
+SOCIAL_AUTH_TWITTER_SECRET = ''
+
+SOCIAL_AUTH_REDDIT_KEY = ''
+SOCIAL_AUTH_REDDIT_SECRET = ''
+SOCIAL_AUTH_REDDIT_AUTH_EXTRA_ARGUMENTS = {'duration': 'permanent'}
+
+##
+# Email validation settings
+
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = '<your email here>@gmail.com'
+EMAIL_HOST_PASSWORD = '<your password here>'
+EMAIL_PORT = 587
+EMAIL_FROM = '<your email here>@gmail.com'

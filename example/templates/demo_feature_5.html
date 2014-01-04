@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% load url from future %}
+
+{% block content %}
+  <section>
+    <header><h1>5. E-mail address verification flow</h1></header>
+    
+    <ul>
+      <li><a href="{% url 'social:begin' "email" %}?next={{ request.path }}">Signup using E-mail</a></li>
+    </ul>
+  </section>
+
+  {% include "user_details.html" %}
+{% endblock %}

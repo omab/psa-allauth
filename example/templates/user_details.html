@@ -1,0 +1,25 @@
+{% if user.is_authenticated %}
+  <section>
+    <header><h1>User details</h1></header>
+    <div>
+      <p>You are logged in as <strong>{{ user.username }}</strong>!</p>
+      <p>Associated accounts:</p>
+      <ul>
+        {% for assoc in backends.associated %}
+          <li>
+            {{ assoc.provider }} ({{ assoc.uid }})
+            {% if show_disconnect %}
+              <form method="post" action="{% url 'social:disconnect_individual' assoc.provider assoc.id %}">
+                {% csrf_token %}
+                <input type="hidden" name="next" value="{{ request.path }}" />
+                <button>Disconnect</button>
+              </form>
+            {% endif %}
+          </li>
+        {% empty %}
+          <li>No associations</li>
+        {% endfor %}
+      </ul>
+    </div>
+  </section>
+{% endif %}

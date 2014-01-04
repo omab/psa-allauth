@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% load url from future %}
+
+{% block content %}
+  <section>
+    <header><h1>1. Signup of both local and social accounts</h1></header>
+
+    <div>
+      <h3>Local</h3>
+      {% include "local_links.html" %}
+
+      <h3>Social</h3>
+      {% include "social_links.html" %}
+    </div>
+  </section>
+
+  {% include "user_details.html" %}
+{% endblock %}
