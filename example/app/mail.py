@@ -3,8 +3,8 @@ from django.core.mail import send_mail
 from django.core.urlresolvers import reverse
 
 
-def send_validation(strategy, code):
-    url = reverse('social:complete', args=(strategy.backend.name,)) + \
+def send_validation(strategy, backend, code):
+    url = reverse('social:complete', args=(backend.name,)) + \
             '?verification_code=' + code.code
     url = strategy.request.build_absolute_uri(url)
     send_mail('Validate your account',

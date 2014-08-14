@@ -17,8 +17,9 @@ def password_check(strategy, user, *args, **kwargs):
             }, RequestContext(strategy.request))
 
 
-def set_password(strategy, user, response, is_new=False, *args, **kwargs):
-    if strategy.backend.name in ('email', 'username') and is_new and \
+def set_password(strategy, backend, user, response, is_new=False,
+                 *args, **kwargs):
+    if backend.name in ('email', 'username') and is_new and \
        response.get('password'):
         user.set_password(response['password'])
         user.save()
