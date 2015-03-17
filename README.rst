@@ -42,7 +42,7 @@ steps:
   there.
 
 .. _django-allauth: https://github.com/pennersr/django-allauth
-.. _their docs: http://django-allauth.readthedocs.org/en/latest/index.html#supported-flows
+.. _their docs: http://django-allauth.readthedocs.org/en/latest/overview.html#supported-flows
 .. _python-social-auth: https://github.com/omab/python-social-auth
 .. _request on reddit: http://www.reddit.com/r/django/comments/1u9nh9/modern_django_registration_packages/cegam4d
 .. _virtualenv: http://www.virtualenv.org/en/latest/
